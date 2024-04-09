@@ -38,4 +38,6 @@ if __name__ == "__main__":
     def number_template(n):
         """Display an HTML page only if n is an integer"""
         return render_template('5-number.html', n=n)
-      app.run(host='0.0.0.0', port=5000)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
