@@ -15,7 +15,8 @@ if __name__ == "__main__":
         states = storage.all("State")
         list = states.values()
         states_list = sorted(list, key=attrgetter('name'))
-        return render_template('8-cities_by_states.html', states_list=states_list)
+        return render_template('8-cities_by_states.html',
+                               states_list=states_list)
 
     @app.route('/states_list', strict_slashes=False)
     def states_list():
