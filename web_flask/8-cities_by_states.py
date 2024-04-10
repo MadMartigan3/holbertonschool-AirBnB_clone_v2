@@ -26,7 +26,7 @@ if __name__ == "__main__":
         return render_template('7-states_list.html', states_list=states_list)
 
     @app.teardown_appcontext
-    def teardown_db(exception):
+    def teardown_db(self):
         """Remove SqlAlchemy Session."""
         storage.close()
 
