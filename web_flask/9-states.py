@@ -9,6 +9,7 @@ from models.state import State
 if __name__ == "__main__":
     app = Flask(__name__)
 
+
 @app.teardown_appcontext
 def teardown(self):
     """Remove the current SQLAlchemy Session."""
@@ -29,6 +30,7 @@ def states_id(id):
         if state.id == id:
             return render_template("9-states.html", states=state, mode="city")
     return render_template("9-states.html", states=state, mode="none")
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
