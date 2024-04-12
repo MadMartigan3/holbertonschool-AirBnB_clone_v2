@@ -6,8 +6,8 @@ from flask import render_template
 from models import storage
 from models.state import State
 
-if __name__ == "__main__":
-    app = Flask(__name__)
+
+app = Flask(__name__)
 
 
 @app.route("/states", strict_slashes=False)
